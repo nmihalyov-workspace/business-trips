@@ -1,0 +1,76 @@
+.solutions
+  margin-bottom: 105px
+  &__tabs
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+  &__tab
+    display: flex
+    align-items: center
+    width: calc(25% - 5px)
+    padding: 14px 5px 17px 25px
+    border-radius: 50px
+    background-color: transparentize($green, .9)
+    cursor: pointer
+    transition: all .3s ease
+    &:hover
+      background-color: $green
+      color: #fff
+      .solutions__tab-icon svg path
+        fill: #fff
+    &--active
+      pointer-events: none
+      background-color: $green
+      color: #fff
+      .solutions__tab-icon svg path
+        fill: #fff
+    &-icon
+      width: 30px
+      height: 30px
+      margin-right: 15px
+      svg path
+        transition: fill .3s ease
+    &-name
+      line-height: 1.4
+      font-size: 19px
+  &__inner
+    border-radius: 20px
+    background-color: #F7F9FB
+  &__content
+    display: none
+    align-items: center
+    padding: 60px 0 60px 50px
+    &--active
+      display: flex
+    &-info
+      padding-left: 150px
+  &__title
+    margin-bottom: 35px
+    line-height: 1.67
+    font:
+      size: 36px
+      weight: 300
+  &__advantages
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__advantage
+    width: calc(50% - 20px)
+    &:first-child,
+    &:nth-child(2)
+      margin-bottom: 50px
+    &-num
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 40px
+      height: 40px
+      margin-bottom: 5px
+      background-color: #fff
+      border-radius: 50%
+      color: $green
+      line-height: 1.75
+      font-size: 16px
+    &-text
+      line-height: 1.375
+      font-size: 16px

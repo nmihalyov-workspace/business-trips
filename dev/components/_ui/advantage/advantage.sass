@@ -1,0 +1,53 @@
+.advantage
+  overflow: hidden
+  width: calc(33.33333333% - 20px)
+  height: 175px
+  margin: 0 10px 20px
+  padding: 25px
+  border-radius: 20px
+  background-color: #EAF7F6
+  transition: all .3s ease
+  &:hover
+    background-color: $green
+    color: #fff
+    .advantage
+      &__head
+        margin-top: 0
+      &__icon
+        width: 50px
+        height: 50px
+        background-color: #fff
+        svg
+          width: 25px
+          height: 25px
+          path
+            fill: $green
+      &__desc
+        opacity: 1
+  &__head
+    display: flex
+    align-items: center
+    margin-top: 30px
+    margin-bottom: 15px
+    transition: margin-top .3s ease
+  &__icon
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 60px
+    height: 60px
+    margin-right: 20px
+    border-radius: 12px
+    background-color: $green
+    transition: all .3s ease
+    svg
+      transition: all .3s ease
+      path
+        transition: fill .3s ease
+  &__title
+    line-height: 1.17
+    font-size: 24px
+  &__desc
+    opacity: 0
+    transition: opacity .3s ease

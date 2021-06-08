@@ -1,1 +1,35 @@
 .footer
+  padding: 60px 0 30px
+  &__copyright
+    opacity: 0.4
+    font-size: 10px
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 20px
+  &__logo
+    display: flex
+    align-items: center
+    &-img
+      width: 43px
+      height: 37px
+      margin-right: 10px
+      background:
+        image: url('../img/logo.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-name
+      font-weight: 700
+  &__nav
+    width: 380px
+    padding-top: 5px
+  &__list
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-start
+    margin-bottom: 45px
+    &-item
+      &:not(:last-child)
+        margin-bottom: 5px

@@ -1,0 +1,20 @@
+include ../_ui/tag/tag
+include ../_ui/compare-item/compare-item
+
+mixin compare
+  section.compare.container
+    .compare__wrapper.wrapper
+      .compare__block
+        +tag('Ранее')
+        .compare__list
+          +compare-item('Ищите сайты', 'и подбираете гостиницу на разных ресурсах', 'search')
+          +compare-item('Боитесь потерять документы', 'и заполняете авансовые отчеты о командировке', 'docs')
+          +compare-item('Переплачиваете комиссию', 'трэвел-агентствам', 'money')
+          +compare-item('Оплачиваете расходы с личной карты', 'и ждете возмещения 2 недели', 'card')
+      .compare__block
+        +tag('С сервисом ППР Командировки')
+        .compare__list
+          +compare-item('Покупаете билеты и гостиницы', 'в одном месте', 'ticket')
+          +compare-item('Контролируете расходы', 'с автоматической загрузкой в «1С»', 'settings')
+          +compare-item('Находите выгодные тарифы', 'без сервисных сборов и наценок', 'discount')
+          +compare-item('Оплачиваете все расходы', 'без сервисных сборов и наценок', 'card-pay')

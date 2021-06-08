@@ -1,0 +1,35 @@
+.compare
+  margin-bottom: 100px
+  padding: 30px 0
+  border-radius: 20px
+  background-color: #EFF2F6
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    max-width: 100% !important
+  &__block
+    width: 50%
+    padding: 70px 40px 80px
+    border-radius: 20px
+    &--highlight
+      background-color: transparentize($green, .9)
+      .tag
+        background-color: $green
+        color: #fff
+      .compare-item__icon
+        background-color: $green
+        svg path
+          fill: #fff
+          &[stroke]
+            stroke: $green
+  &__list
+    position: relative
+    margin-top: 20px
+    &:before
+      content: ''
+      position: absolute
+      top: 30px
+      left: 3px
+      width: 0
+      height: calc(100% - 60px)
+      border-left: 1px dashed $green

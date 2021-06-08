@@ -1,1 +1,40 @@
 .header
+  z-index: 999
+  position: fixed
+  top: 0
+  left: 0
+  max-width: 100%
+  width: 100%
+  background-color: #fff
+  padding: 30px 0
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__main
+    display: flex
+    align-items: center
+  &__logo
+    display: flex
+    align-items: center
+    margin-right: 60px
+    &-img
+      width: 43px
+      height: 37px
+      margin-right: 10px
+      background:
+        image: url('../img/logo.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-name
+      font-weight: 700
+  &__link
+    margin-right: 30px
+  &__sub
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__btn
+    min-width: 0
+    padding: 13px 20px

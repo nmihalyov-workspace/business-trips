@@ -3,28 +3,30 @@
   flex-flow: row nowrap
   justify-content: center
   align-items: center
-  padding: 10px 20px
-  border-radius: 4px
+  min-width: 300px
+  padding: 22px
+  border-radius: 50px
   border: none
   text-decoration: none
   transition: all .3s ease
-  color: #fff
+  color: $black
   cursor: pointer
   outline: 0
   text-align: center
+  line-height: 1
   font:
-    size: 14px
-    weight: 300
+    family: 'ProximaNova', Helvetica, sans-serif
+    size: 16px
+    weight: 400
   &--disabled
     pointer-events: none
     filter: grayscale(1)
   &--primary
-    background-color: $red
+    background-color: $yellow
     &:hover
-      background-color: lighten($red, 7)
-      color: #fff
+      background-color: darken($yellow, 7)
     &:active
-      background-color: darken($red, 3)
+      background-color: lighten($yellow, 3)
       transition: none
   &--secondary
     padding: 9px 19px
@@ -37,6 +39,12 @@
       border-color: lighten($black, 7)
       background-color: lighten($black, 7)
       transition: none
-
-@media only screen and (max-width: $tablet)
-  .button
+  &--tertiary
+    background-color: #fff
+    color: #00618B
+    &:hover
+      background-color: darken(#fff, 7)
+      color: #00618B
+    &:active
+      background-color: lighten(#fff, 3)
+      transition: none

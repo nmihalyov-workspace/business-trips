@@ -1,0 +1,12 @@
+mixin security-item(title, desc, icon)
+  .security-item
+    .security-item__head
+      .security-item__icon
+        if icon === 'tasks'
+          include assets/tasks.svg
+        if icon === 'automatic'
+          include assets/automatic.svg
+        if icon === 'money'
+          include assets/money.svg
+      p.security-item__title!= title
+    p.security-item__desc= desc

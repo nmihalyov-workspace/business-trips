@@ -1,0 +1,5 @@
+mixin organization-item(title, desc, num, numPosition)
+  .organization-item
+    p.organization-item__title= title
+    p.organization-item__desc= desc
+    p.organization-item__num(class=`organization-item__num--${numPosition}`)= num

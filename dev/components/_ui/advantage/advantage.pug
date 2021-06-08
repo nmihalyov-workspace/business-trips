@@ -1,0 +1,18 @@
+mixin advantage(title, desc, icon)
+  .advantage
+    .advantage__head
+      .advantage__icon
+        if icon === 'commissions'
+          include assets/commissions.svg
+        if icon === 'automatic'
+          include assets/automatic.svg
+        if icon === 'cashback'
+          include assets/cashback.svg
+        if icon === 'free'
+          include assets/free.svg
+        if icon === 'online'
+          include assets/online.svg
+        if icon === 'search'
+          include assets/search.svg
+      p.advantage__title= title
+    p.advantage__desc= desc

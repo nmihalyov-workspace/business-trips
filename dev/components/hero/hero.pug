@@ -1,0 +1,15 @@
+include ../_ui/button/button
+
+mixin hero
+  section.hero.block.container
+    .hero__wrapper.wrapper
+      .hero__content
+        h1.hero__heading ППР Командировки — сохранит&nbsp;ваш бюджет и время
+        ul.hero__list
+          li.hero__list-item Бронируйте билеты и отели без сервисных сборов
+          li.hero__list-item Управляйте процессом оформления всего в несколько кликов
+        +button('primary', 'link', 'Попробовать бесплатно', '', {link: '#'})
+      .hero__man
+        .hero__man-img
+        .hero__man-round
+        .hero__man-plane

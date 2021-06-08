@@ -1,0 +1,16 @@
+include ../_ui/tag/tag
+include ../_ui/heading/heading
+include ../_ui/organization-item/organization-item
+
+mixin organization
+  section.organization.container
+    .organization__wrapper.wrapper
+      +tag('Как это работает')
+      +heading('Организация поездок через партнёра Smartway')
+      .organization__map
+        +organization-item('Выбор рейса и гостиницы', 'Найдите удобные варианты через простой и привычный поиск', '1', 'top')
+        +organization-item('Бронирование командировки', 'Зафиксируйте цену на время согласования поездки', '2', 'bottom')
+        +organization-item('Согласование брони', 'Отправьте руководителю варианты и согласуйте их прямо в сервисе', '3', 'top')
+        +organization-item('Безналичная оплата', 'Оплатите поездку со счёта компании в один клик', '4', 'bottom')
+        +organization-item('Формирование отчётности', 'Получите закрывающие документы в личном кабинете', '5', 'bottom')
+        .organization__path

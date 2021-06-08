@@ -1,0 +1,22 @@
+mixin compare-item(title, desc, icon)
+  .compare-item
+    .compare-item__icon
+      if icon === 'search'
+        include assets/search.svg
+      if icon === 'docs'
+        include assets/docs.svg
+      if icon === 'money'
+        include assets/money.svg
+      if icon === 'card'
+        include assets/card.svg
+      if icon === 'ticket'
+        include assets/ticket.svg
+      if icon === 'settings'
+        include assets/settings.svg
+      if icon === 'discount'
+        include assets/discount.svg
+      if icon === 'card-pay'
+        include assets/card-pay.svg
+    .compare-item__info
+      p.compare-item__title= title
+      p.compare-item__desc= desc

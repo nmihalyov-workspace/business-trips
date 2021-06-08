@@ -1,13 +1,7 @@
 {
-	"name": "gulp-pure-start",
-	"version": "1.3.0",
-	"description": "Start your project with 'Gulp Pure Start' easily then ever!",
+	"name": "business-trips",
+	"version": "1.0.0",
 	"main": "gulpfile.js",
-	"keywords": [
-		"gulp",
-		"pure",
-		"start"
-	],
 	"author": "Nikita Mihalyov <nikita.mihalyov@gmail.com>",
   "license": "ISC",
   "scripts": {

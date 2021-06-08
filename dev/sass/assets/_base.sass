@@ -9,10 +9,11 @@
 body
   width: 100%
   min-height: 100vh
-  line-height: 1.4
+  padding-top: 104px
+  line-height: 1.5
   @include font-fix
   font:
-    family: 'Montserrat', Helvetica, sans-serif
+    family: 'ProximaNova', Helvetica, sans-serif
     size: 18px
     weight: 400
 
@@ -24,27 +25,27 @@ h1, h2, h3, h4, h5, h6
 
 a
   color: $black
+  text-decoration: none
   transition: color .3s ease
   &:hover
     color: transparentize($black, 0.2)
 
 .container
-  width: 100%
+  max-width: 1380px
+  width: calc(100% - 60px)
+  margin: 0 auto
   .wrapper
-    max-width: 1200px
+    max-width: 1250px
     width: 100%
     margin: 0 auto
     padding: 0 30px
 
-@media only screen and (max-width: $tablet)
-  body
-    font-size: 16px
-  .container
-    .wrapper
-      max-width: 768px
-      padding: 0 20px
+.block
+  background: linear-gradient(80deg,#00618b 1.59%,#2eb2a0 98.41%)
+  box-shadow: 0px 24px 42px -18px rgba(0, 55, 78, 0.5)
+  border-radius: 20px
 
-@media only screen and (max-width: $mobile)
+@media only screen and (max-width: $adaptive)
   body
     font-size: 14px
   .container
