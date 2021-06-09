@@ -44,6 +44,30 @@
       display: flex
     &-info
       padding-left: 150px
+  &__image
+    position: relative
+    &-flower,
+    &-cloud
+      position: absolute
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-flower
+      bottom: 46px
+      left: 0
+      width: 93px
+      height: 134px
+      background-image: url('../img/flower.svg')
+      transform-origin: bottom center
+      animation: flutter 5s linear infinite
+    &-cloud
+      top: 7px
+      left: 90px
+      width: 97px
+      height: 54px
+      background-image: url('../img/cloud.svg')
+      animation: float 7s linear infinite
   &__title
     margin-bottom: 35px
     line-height: 1.67
@@ -56,9 +80,10 @@
     justify-content: space-between
   &__advantage
     width: calc(50% - 20px)
+    margin-top: 50px
     &:first-child,
     &:nth-child(2)
-      margin-bottom: 50px
+      margin-top: 0
     &-num
       display: flex
       justify-content: center
@@ -74,3 +99,19 @@
     &-text
       line-height: 1.375
       font-size: 16px
+
+@keyframes float
+  0%, 100%
+    transform: translateX(0)
+  25%
+    transform: translateX(10px)
+  75%
+    transform: translateX(-10px)
+
+@keyframes flutter
+  0%, 100%
+    transform: skewX(0)
+  25%
+    transform: skewX(3deg)
+  75%
+    transform: skewX(-3deg)

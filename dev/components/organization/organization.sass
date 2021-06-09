@@ -10,6 +10,25 @@
       size: contain
       position: center
       repeat: no-repeat
+    &--animated
+      .organization-item
+        opacity: 1 !important
+        transform: translateY(0) !important
+      .organization__plane
+        animation: plane 10s infinite forwards linear
+    .organization-item
+      opacity: 0
+      transition: all .5s ease-out
+      &:nth-child(1),
+      &:nth-child(3)
+        transform: translateY(50px)
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5)
+        transform: translateY(-50px)
+      @for $i from 2 through 5
+        &:nth-child(#{$i}n)
+          transition-delay: #{$i * .2 - .2}s
   &__path
     z-index: 1
     position: absolute
@@ -22,3 +41,22 @@
       size: contain
       position: center
       repeat: no-repeat
+  &__plane
+    position: absolute
+    top: 0
+    left: 0
+    width: 101px
+    height: 99px
+    offset-path: path('M0.5 157.001C164 157.001 247.5 -15.9999 327.5 2.50036C407.5 21.0006 322.5 324.501 421 330.501C519.5 336.501 604.736 167.159 741 175C880.998 183.057 895.5 534.001 1058.5 330.001')
+    transform: rotate(30deg)
+    background:
+      image: url('../img/plane.png')
+      size: contain
+      position: center
+      repeat: no-repeat
+
+@keyframes plane
+  0%
+    offset-distance: 0%
+  100%
+    offset-distance: 100%
