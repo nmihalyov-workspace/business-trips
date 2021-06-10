@@ -10,6 +10,7 @@ body
   width: 100%
   min-height: 100vh
   padding-top: 104px
+  color: $black
   line-height: 1.5
   @include font-fix
   font:
@@ -30,6 +31,9 @@ a
   &:hover
     color: transparentize($black, 0.2)
 
+.page-wrapper
+  overflow: hidden
+
 .container
   max-width: 1380px
   width: calc(100% - 60px)
@@ -47,8 +51,21 @@ a
 
 @media only screen and (max-width: $adaptive)
   body
-    font-size: 14px
+    padding-top: 77px
+    font-size: 16px
+
   .container
+    width: 100%
     .wrapper
-      max-width: 320px
-      padding: 0 10px
+      max-width: 375px
+      width: 100%
+      padding: 0 15px
+
+  .block
+    background: transparent
+    box-shadow: none
+    border-radius: 0
+    &__mobile
+      background: linear-gradient(80deg,#00618b 1.59%,#2eb2a0 98.41%)
+      box-shadow: 0px 24px 42px -18px rgba(0, 55, 78, 0.5)
+      border-radius: 20px

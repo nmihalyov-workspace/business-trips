@@ -15,7 +15,7 @@
         opacity: 1 !important
         transform: translateY(0) !important
       .organization__plane
-        animation: plane 10s infinite forwards linear
+        animation: path 10s infinite forwards linear
     .organization-item
       opacity: 0
       transition: all .5s ease-out
@@ -55,8 +55,19 @@
       position: center
       repeat: no-repeat
 
-@keyframes plane
+@keyframes path
   0%
     offset-distance: 0%
   100%
     offset-distance: 100%
+
+@media only screen and (max-width: $adaptive)
+  .organization
+    margin-bottom: 50px
+    &__map
+      width: 100%
+      height: auto
+      background: transparent
+    &__path,
+    &__plane
+      display: none

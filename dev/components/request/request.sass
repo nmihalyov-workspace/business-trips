@@ -62,3 +62,31 @@
     a
       color: #fff
       text-decoration: underline
+
+@media only screen and (max-width: $adaptive)
+  .request
+    padding-top: 0
+    padding-bottom: 0
+    &__wrapper
+      padding: 40px 20px 35px
+    &__heading
+      margin-bottom: 30px
+      font-size: 24px
+    &__steps
+      flex-direction: column
+      margin-bottom: 10px
+    &__step
+      width: 100%
+      margin-bottom: 30px
+      &:after
+        display: none
+    &__form
+      width: 100%
+      &-row
+        flex-direction: column
+        margin-bottom: 0
+      &-input
+        max-width: 100%
+        margin-bottom: 15px
+    &__disclaimer
+      font-size: 12px

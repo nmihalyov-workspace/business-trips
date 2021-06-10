@@ -25,11 +25,19 @@
   &__list
     position: relative
     margin-top: 20px
-    &:before
-      content: ''
-      position: absolute
-      top: 30px
-      left: 3px
-      width: 0
-      height: calc(100% - 60px)
-      border-left: 1px dashed $green
+
+@media only screen and (max-width: $adaptive)
+  .compare
+    margin-bottom: 50px
+    padding: 0
+    background-color: transparent
+    &__wrapper
+      max-width: 375px !important
+      width: 100%
+      flex-direction: column
+      border-radius: 20px
+      background-color: #EFF2F6
+    &__block
+      width: calc(100% + 30px)
+      margin-left: -15px
+      padding: 50px 15px 45px

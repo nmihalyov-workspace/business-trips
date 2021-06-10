@@ -38,3 +38,25 @@
   &__btn
     min-width: 0
     padding: 13px 20px
+  &__burger
+    display: none
+
+@media only screen and (max-width: $adaptive)
+  .header
+    padding: 20px 0
+    &__logo
+      margin-right: 0
+      &-name
+        font-size: 18px
+    &__link,
+    &__sub
+      display: none
+    &__burger
+      display: block
+      width: 24px
+      height: 18px
+      background:
+        image: url('../img/icons/burger.svg')
+        size: contain
+        position: center
+        repeat: no-repeat

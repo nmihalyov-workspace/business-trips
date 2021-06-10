@@ -17,14 +17,40 @@
   &__buttons
     display: flex
   &__download
-    width: 120px
+    width: 135px
     height: 40px
     margin-right: 20px
     background:
       size: contain
-      position: center
+      position: left center
       repeat: no-repeat
     &--google
       background-image: url('../img/google-play.svg')
     &--apple
       background-image: url('../img/app-store.svg')
+
+@media only screen and (max-width: $adaptive)
+  .app
+    margin: -40px auto 50px
+    &__wrapper
+      flex-direction: column-reverse
+    &__img
+      width: 265px
+      height: auto
+      margin-bottom: 20px
+    &__heading
+      margin-bottom: 15px
+      text-align: center
+      font-size: 24px
+    &__desc
+      text-align: center
+      br
+        display: none
+    &__buttons
+      justify-content: center
+    &__download
+      width: calc(50% - 5px)
+      height: auto
+      margin: 0
+      padding-top: 14%
+      background-position: center

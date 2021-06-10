@@ -24,9 +24,28 @@ mixin solutions
             .solutions__tab-icon
               include assets/team.svg
             p.solutions__tab-name для сотрудника
+        .solutions__select
+          .solutions__select-item(data-tab="1")
+            .solutions__select-icon
+              include assets/businessman.svg
+            p.solutions__select-name для руководителя
+          .solutions__select-menu
+            .solutions__select-item(data-tab="2")
+              .solutions__select-icon
+                include assets/world.svg
+              p.solutions__select-name для тревел-менеджера
+            .solutions__select-item(data-tab="3")
+              .solutions__select-icon
+                include assets/budget.svg
+              p.solutions__select-name для бухгалтера
+            .solutions__select-item(data-tab="4")
+              .solutions__select-icon
+                include assets/team.svg
+              p.solutions__select-name для сотрудника
     .solutions__inner.container
       .wrapper
         .solutions__content.solutions__content--active(data-tab="1")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
           .solutions__image
             img.solutions__image-pic(src="img/solutions.svg", alt="")
             .solutions__image-cloud
@@ -47,6 +66,7 @@ mixin solutions
                 p.solutions__advantage-num 04
                 p.solutions__advantage-text Удобная передача данных в ERP-систему
         .solutions__content(data-tab="2")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
           .solutions__image
             img.solutions__image-pic(src="img/solutions.svg", alt="")
             .solutions__image-cloud
@@ -67,6 +87,7 @@ mixin solutions
                 p.solutions__advantage-num 04
                 p.solutions__advantage-text Профессиональная поддержка 24/7
         .solutions__content(data-tab="3")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
           .solutions__image
             img.solutions__image-pic(src="img/solutions.svg", alt="")
             .solutions__image-cloud
@@ -93,6 +114,7 @@ mixin solutions
                 p.solutions__advantage-num 06
                 p.solutions__advantage-text Копии всегда доступны в сервисе, а оригиналы отправляются через ЭДО или почту
         .solutions__content(data-tab="4")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
           .solutions__image
             img.solutions__image-pic(src="img/solutions.svg", alt="")
             .solutions__image-cloud

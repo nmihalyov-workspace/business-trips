@@ -55,3 +55,15 @@
       top: -10px
     &--bottom
       bottom: -10px
+
+@media only screen and (max-width: $adaptive)
+  .organization-item
+    position: static
+    width: 100%
+    padding: 25px 20px
+    &:not(:last-child)
+      margin-bottom: 30px
+    &__num
+      left: 5px
+      top: -10px !important
+      bottom: auto !important

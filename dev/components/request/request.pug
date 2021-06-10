@@ -3,27 +3,29 @@ include ../_ui/button/button
 
 mixin request
   section.request.container.block
-    .request__wrapper.wrapper
-      p.request__heading Попробуйте сервис «Командировки ППР» бесплатно
-      .request__steps
-        .request__step
-          p.request__step-num 1
-          p.request__step-title Оставьте заявку
-          p.request__step-desc Оставьте заявку или позвоните нам *номер*
-        .request__step
-          p.request__step-num 2
-          p.request__step-title Доступ в демо-версию
-          p.request__step-desc Откроем демо-доступ, проведем презентацию и ответим на ваши вопросы
-        .request__step
-          p.request__step-num 3
-          p.request__step-title Начало работы
-          p.request__step-desc Подписываем договор и открываем личный кабинет. Можно организовать поездки.
-      form.request__form(action="")
-        .request__form-row
-          +input('text', '', 'name', 'Имя', '', 'request__form-input')
-          +input('email', '', 'email', 'Почта', '', 'request__form-input')
-        .request__form-row
-          +input('text', '', 'company', 'Название компании', '', 'request__form-input')
-          +input('tel', '', 'phone', 'Телефон', '', 'request__form-input')
-        +button('tertiary', 'submit', 'Попробовать бесплатно', 'request__form-btn', {link: '#'})
-        p.request__disclaimer Нажимая на кнопку «Оставить заявку», вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>
+    .wrapper
+      .block__mobile
+        .request__wrapper
+          p.request__heading Попробуйте сервис «Командировки ППР» бесплатно
+          .request__steps
+            .request__step
+              p.request__step-num 1
+              p.request__step-title Оставьте заявку
+              p.request__step-desc Оставьте заявку или позвоните нам *номер*
+            .request__step
+              p.request__step-num 2
+              p.request__step-title Доступ в демо-версию
+              p.request__step-desc Откроем демо-доступ, проведем презентацию и ответим на ваши вопросы
+            .request__step
+              p.request__step-num 3
+              p.request__step-title Начало работы
+              p.request__step-desc Подписываем договор и открываем личный кабинет. Можно организовать поездки.
+          form.request__form(action="")
+            .request__form-row
+              +input('text', '', 'name', 'Имя', '', 'request__form-input')
+              +input('email', '', 'email', 'Почта', '', 'request__form-input')
+            .request__form-row
+              +input('text', '', 'company', 'Название компании', '', 'request__form-input')
+              +input('tel', '', 'phone', 'Телефон', '', 'request__form-input')
+            +button('tertiary', 'submit', 'Попробовать бесплатно', 'request__form-btn', {link: '#'})
+            p.request__disclaimer Нажимая на кнопку «Оставить заявку», вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a>

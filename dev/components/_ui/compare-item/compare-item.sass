@@ -3,18 +3,26 @@
   display: flex
   align-items: center
   padding-left: 25px
-  &:not(:last-child)
-    margin-bottom: 30px
-  &:before
+  &:before,
+  &:after
     content: ''
     position: absolute
-    left: 0
-    top: calc(50% - 3px)
-    width: 7px
-    height: 7px
-    border-radius: 50%
-    background-color: $green
+    width: 0
+    left: 8px
+    border-left: 1px dashed $green
+  &:before
+    top: 0
+    height: 50%
+  &:after
+    bottom: 3px
+    height: calc(50% + 5px)
+  &:first-child:before,
+  &:last-child:after
+    display: none
+  &:not(:last-child)
+    padding-bottom: 30px
   &__icon
+    position: relative
     display: flex
     justify-content: center
     align-items: center
@@ -24,6 +32,15 @@
     border-radius: 12px
     background-color: transparentize($green, .9)
     transition: background-color .3s ease
+    &:before
+      content: ''
+      position: absolute
+      left: -20px
+      top: calc(50% - 3px)
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      background-color: $green
     svg path
       fill: $green
       transition: all .3s ease
@@ -35,3 +52,14 @@
   &__desc
     opacity: 0.5
     font-size: 16px
+
+@media only screen and (max-width: $adaptive)
+  .compare-item
+    padding-left: 20px
+    &:before,
+    &:after
+      left: 3px
+    &:not(:last-child)
+      padding-bottom: 25px
+    &__icon
+      flex-shrink: 0
