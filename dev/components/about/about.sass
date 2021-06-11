@@ -1,0 +1,82 @@
+.about
+  margin-bottom: 100px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 615px
+    height: 586px
+    border-radius: 20px
+    background:
+      image: url('../img/about-bg.png'), linear-gradient(80deg,#00618b 1.59%,#2eb2a0 98.41%)
+      size: cover
+      position: center
+      repeat: no-repeat
+    &-img
+      width: 404px
+      height: 342px
+      margin-bottom: 40px
+      background:
+        image: url('../img/logo.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &-text
+      color: #fff
+      font:
+        size: 36px
+        weight: 700
+  &__info
+    max-width: 520px
+    padding-right: 100px
+  &__desc
+    margin-bottom: 10px
+    font-size: 16px
+  &__advantages
+    display: flex
+    flex-wrap: wrap
+  &__advantage
+    width: 50%
+    margin-top: 30px
+    &-title
+      margin-bottom: 5px
+      color: $green
+      line-height: 0.83
+      font:
+        size: 36px
+        weight: 300
+    &-desc
+      padding-right: 25px
+      font-size: 16px
+
+@media only screen and (max-width: $adaptive)
+  .about
+    margin-bottom: 60px
+    &__wrapper
+      flex-direction: column
+      padding-bottom: 20px !important
+      border-bottom: 1px solid transparentize(#000, .9)
+    &__logo
+      width: 100%
+      height: 330px
+      margin-bottom: 50px
+      &-img
+        width: 186px
+        height: 157px
+        margin-bottom: 35px
+      &-text
+        font-size: 24px
+    &__info
+      padding-right: 0
+      .heading
+        text-align: center
+    &__desc
+      margin-bottom: 45px
+    &__advantage
+      width: 100%
+      margin: 0 0 30px
