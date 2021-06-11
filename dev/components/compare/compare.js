@@ -7,4 +7,6 @@ const compareAnimation = () => {
   }
 };
 
-window.addEventListener('scroll', compareAnimation);
+if (document.querySelector('.compare__block')) {
+  window.addEventListener('scroll', compareAnimation);
+}

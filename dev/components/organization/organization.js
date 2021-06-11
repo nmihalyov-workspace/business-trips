@@ -7,4 +7,6 @@ const organizationAnimation = () => {
   }
 };
 
-window.addEventListener('scroll', organizationAnimation);
+if (document.querySelector('.organization__map')) {
+  window.addEventListener('scroll', organizationAnimation);
+}

@@ -1,0 +1,12 @@
+mixin possibility(heading, subheading, desc, highlight, image)
+  section.possibility.container
+    .possibility__wrapper.wrapper
+      h2.possibility__heading= heading
+      .possibility__content
+        .possibility__img
+          img.possibility__img-pic(src=image, alt="")
+        .possibility__info
+          p.possibility__subheading= subheading
+          p.possibility__desc!= desc
+          p.possibility__highlight!= highlight
+        a.possibility__more(href="javascript:void(0)", data-show="Показать больше", data-hide="Скрыть описание") Показать больше
