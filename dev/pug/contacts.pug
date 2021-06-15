@@ -1,0 +1,17 @@
+include ../components/header/header
+include ../components/contacts/contacts
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title ППР Командировки
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=551e4e8b-009c-477d-abe2-4a29c266b768&lang=ru_RU", type="text/javascript")
+  body
+    .page-wrapper
+      +header
+      +contacts
+      +footer

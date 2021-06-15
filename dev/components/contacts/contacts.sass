@@ -1,0 +1,79 @@
+.contacts
+  padding-bottom: 50px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__mobile
+    display: none
+  &__map
+    overflow: hidden
+    width: 615px
+    height: 820px
+    border-radius: 20px
+    [class*="ground-pane"]
+      filter: grayscale(1)
+  &__info
+    width: 520px
+    padding-right: 125px
+  &__desc
+    opacity: 0.6
+    margin: 10px 0 35px
+    font-size: 16px
+  &__subheading
+    opacity: 0.6
+    margin-bottom: 8px
+    font-size: 16px
+  &__address
+    margin-bottom: 35px
+  &__contact
+    margin-bottom: 35px
+    line-height: 1.25
+    font-size: 24px
+    span
+      opacity: 0.6
+    a
+      color: $green
+  &__credential
+    display: flex
+    line-height: 1.25
+    font-size: 24px
+    p:first-child
+      opacity: 0.6
+      width: 105px
+
+@media only screen and (max-width: $adaptive)
+  .contacts
+    padding-bottom: 35px
+    &__wrapper
+      flex-direction: column
+      padding-top: 40px !important
+    &__mobile
+      display: block
+      .heading
+        text-align: center
+    &__desc
+      margin-top: 0
+    &__map
+      width: calc(100% + 30px)
+      height: 375px
+      margin-bottom: 50px
+      border-radius: 0
+    &__info
+      width: 100%
+      padding-right: 0 
+      .heading,
+      .contacts__desc
+        display: none
+    &__address
+      margin-bottom: 25px
+      line-height: 1.2
+      font-size: 20px
+    &__contact
+      margin-bottom: 25px
+      font-size: 20px
+    &__credential
+      line-height: 1.3
+      font-size: 18px
+      p:first-child
+        width: 85px
