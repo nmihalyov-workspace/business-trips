@@ -1,10 +1,10 @@
-const mapElement = document.querySelector('.js-contacts-map');
+const $map = document.querySelector('.js-contacts-map');
 
-if (mapElement) {
+if ($map) {
   const location = [55.805533, 37.521336];
   
   const initMap = () => {
-    const map = new ymaps.Map(mapElement, {
+    const map = new ymaps.Map($map, {
       center: location,
       zoom: 16
     });

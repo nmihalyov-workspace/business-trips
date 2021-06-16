@@ -13,4 +13,14 @@ mixin header
       .header__sub
         a.header__link(href="tel:+78002229476") 8 800 222 94 76
         +button('secondary', 'link', 'Попробовать бесплатно', 'header__btn', {link: '#'})
-      .header__burger
+      .header__burger.js-burger
+  .header__menu.container
+    .header__menu-wrapper.wrapper
+      div
+        a.header__menu-link(href="possibilities.html") Возможности
+        a.header__menu-link(href="about.html") О компании
+        a.header__menu-link(href="contacts.html") Контакты
+      div
+        a.header__menu-link(href="mailto:sales@petrolplus.ru") sales@petrolplus.ru
+        a.header__menu-link(href="tel:+78002229476") 8 800 222 94 76
+        +button('primary', 'link', 'Попробовать бесплатно', 'header__menu-btn', {link: '#'})
