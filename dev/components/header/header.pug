@@ -1,6 +1,6 @@
 include ../_ui/button/button
 
-mixin header
+mixin header(main)
   header.header.container
     .header__wrapper.wrapper
       .header__main
@@ -12,7 +12,10 @@ mixin header
         a.header__link(href="contacts.html") Контакты
       .header__sub
         a.header__link(href="tel:+78002229476") 8 800 222 94 76
-        +button('secondary', 'link', 'Попробовать бесплатно', 'header__btn', {link: '#'})
+        if main
+          +button('secondary', 'link', 'Попробовать бесплатно', 'header__btn', {link: '#'})
+        else
+          +button('primary', 'link', 'Попробовать бесплатно', 'header__btn', {link: '#'})
       .header__burger.js-burger
   .header__menu.container
     .header__menu-wrapper.wrapper

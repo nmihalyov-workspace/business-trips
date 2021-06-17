@@ -39,13 +39,14 @@
     border-radius: 20px
     background-color: $light-blue
   &__content
-    display: none
+    display: flex
     align-items: center
     padding: 60px 0 60px 50px
-    &--active
-      display: flex
     &-info
+      display: none
       padding-left: 150px
+      &--active
+        display: block
     &-btn
       display: none
   &__image

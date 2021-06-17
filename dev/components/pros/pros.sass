@@ -1,5 +1,15 @@
 .pros
   margin-bottom: 45px
+  &--about .wrapper
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: -50px
+      left: 30px
+      width: calc(100% - 60px)
+      height: 1px
+      background: transparentize(#000, .9)
   &__grid
     display: flex
     flex-wrap: wrap
@@ -9,6 +19,9 @@
 @media only screen and (max-width: $adaptive)
   .pros
     margin-bottom: 45px
+    &--about .wrapper:after
+      left: 15px
+      width: calc(100% - 30px)
     &__grid
       flex-direction: column
       width: 100%

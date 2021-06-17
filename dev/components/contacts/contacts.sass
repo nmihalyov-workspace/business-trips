@@ -1,9 +1,18 @@
 .contacts
   padding-bottom: 50px
   &__wrapper
+    position: relative
     display: flex
     justify-content: space-between
     align-items: center
+    &:after
+      content: ''
+      position: absolute
+      bottom: -50px
+      left: 30px
+      width: calc(100% - 60px)
+      height: 1px
+      background: transparentize(#000, .9)
     .heading
       line-height: 1.125
       font-size: 48px
@@ -53,6 +62,9 @@
     &__wrapper
       flex-direction: column
       padding-top: 40px !important
+      &:after
+        left: 15px
+        width: calc(100% - 30px)
     &__mobile
       display: block
       .heading
