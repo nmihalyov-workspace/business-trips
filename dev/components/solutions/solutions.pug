@@ -44,18 +44,18 @@ mixin solutions
               p.solutions__select-name для сотрудника
     .solutions__inner.container
       .wrapper
-        .solutions__content
+        .solutions__content.solutions__content--active(data-tab="1")
           +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
           .solutions__image
             img.solutions__image-pic(src="img/solutions.svg", alt="")
-            .solutions__image-cloud
-            .solutions__image-flower
-          .solutions__content-info.solutions__content-info--active(data-tab="1")
+            .solutions__image-cloud(data-cloud="1")
+            .solutions__image-flower(data-flower="1")
+          .solutions__content-info.solutions__content-info
             p.solutions__title Для руководителя
             .solutions__advantages
               .solutions__advantage
                 p.solutions__advantage-num 01
-                p.solutions__advantage-text Нет сервисных сборов за покупку билетов
+                p.solutions__advantage-text Нет сервисных сборов за покупку билетов
               .solutions__advantage
                 p.solutions__advantage-num 02
                 p.solutions__advantage-text Кэшбэк за авиабилеты от&nbsp;перевозчиков
@@ -65,7 +65,12 @@ mixin solutions
               .solutions__advantage
                 p.solutions__advantage-num 04
                 p.solutions__advantage-text Удобная передача данных в ERP-систему
-          .solutions__content-info(data-tab="2")
+        .solutions__content(data-tab="2")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
+          .solutions__image
+            img.solutions__image-pic(src="img/solutions-2.svg", alt="")
+            .solutions__image-flower(data-flower="2")
+          .solutions__content-info
             p.solutions__title Для тревел-менеджера
             .solutions__advantages
               .solutions__advantage
@@ -80,7 +85,13 @@ mixin solutions
               .solutions__advantage
                 p.solutions__advantage-num 04
                 p.solutions__advantage-text Профессиональная поддержка 24/7
-          .solutions__content-info(data-tab="3")
+        .solutions__content(data-tab="3")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
+          .solutions__image
+            img.solutions__image-pic(src="img/solutions-3.svg", alt="")
+            .solutions__image-bubble
+            .solutions__image-cloud(data-cloud="2")
+          .solutions__content-info
             p.solutions__title Для бухгалтера
             .solutions__advantages
               .solutions__advantage
@@ -101,7 +112,13 @@ mixin solutions
               .solutions__advantage
                 p.solutions__advantage-num 06
                 p.solutions__advantage-text Копии всегда доступны в сервисе, а оригиналы отправляются через ЭДО или почту
-          .solutions__content-info(data-tab="4")
+        .solutions__content(data-tab="4")
+          +button('primary', 'link', 'Попробовать бесплатно', 'solutions__content-btn', {link: '#'})
+          .solutions__image
+            img.solutions__image-pic(src="img/solutions-4.svg", alt="")
+            .solutions__image-relations
+            .solutions__image-flower(data-flower="3")
+          .solutions__content-info
             p.solutions__title Для сотрудника
             .solutions__advantages
               .solutions__advantage

@@ -39,40 +39,77 @@
     border-radius: 20px
     background-color: $light-blue
   &__content
-    display: flex
+    display: none
     align-items: center
     padding: 60px 0 60px 50px
+    &--active
+      display: flex
     &-info
-      display: none
       padding-left: 150px
-      &--active
-        display: block
     &-btn
       display: none
   &__image
     position: relative
+    &-pic
+      z-index: 2
+      position: relative
     &-flower,
-    &-cloud
+    &-cloud,
+    &-bubble,
+    &-relations
       position: absolute
       background:
         size: contain
         position: center
         repeat: no-repeat
     &-flower
-      bottom: 46px
-      left: 0
       width: 93px
       height: 134px
-      background-image: url('../img/flower.svg')
       transform-origin: bottom center
       animation: flutter 5s linear infinite
+      &[data-flower="1"]
+        bottom: 46px
+        left: 0
+        background-image: url('../img/flower.svg')
+      &[data-flower="2"]
+        bottom: 51px
+        right: 5px
+        background-image: url('../img/flower-2.svg')
+      &[data-flower="3"]
+        width: 96px
+        height: 171px
+        bottom: 45px
+        left: 0
+        background-image: url('../img/flower-3.svg')
     &-cloud
-      top: 7px
-      left: 90px
-      width: 97px
-      height: 54px
-      background-image: url('../img/cloud.svg')
       animation: float 7s linear infinite
+      &[data-cloud="1"]
+        top: 7px
+        left: 90px
+        width: 97px
+        height: 54px
+        background-image: url('../img/cloud.svg')
+      &[data-cloud="2"]
+        z-index: 1
+        top: 15px
+        right: 5px
+        width: 69px
+        height: 39px
+        background-image: url('../img/cloud-2.svg')
+    &-bubble
+      top: 7px
+      left: 60px
+      width: 91px
+      height: 71px
+      background-image: url('../img/bubble.svg')
+      animation: bubble 5s linear infinite
+    &-relations
+      top: 50px
+      left: 45px
+      width: 52px
+      height: 58px
+      background-image: url('../img/relations.svg')
+      animation: relations 7s linear infinite
   &__title
     margin-bottom: 35px
     line-height: 1.67
@@ -121,6 +158,30 @@
     transform: skewX(3deg)
   75%
     transform: skewX(-3deg)
+
+@keyframes bubble
+  0%, 100%
+    transform: scale(1)
+  20%
+    transform: scale(1.1)
+  30%
+    transform: scale(1.05)
+  50%
+    transform: scale(1.075)
+  60%
+    transform: scale(1.04)
+  75%
+    transform: scale(1.125)
+
+@keyframes relations
+  0%, 100%
+    transform: rotate(0)
+  10%, 40%
+    transform: rotate(180deg)
+  50%, 60%
+    transform: rotate(360deg)
+  60.0000001%
+    transform: rotate(0)
 
 @media only screen and (max-width: $adaptive)
   .solutions
@@ -209,11 +270,36 @@
       &-pic
         width: 100%
       &-flower
-        bottom: 11.5%
         width: 23%
         height: 40%
+        &[data-flower="1"]
+          bottom: 11.5%
+        &[data-flower="2"]
+          bottom: 18%
+          right: 1%
+        &[data-flower="3"]
+          bottom: 12%
+          left: 3%
+          width: 17%
+          height: 31%
       &-cloud
-        top: 5%
-        left: 10%
-        width: 30%
-        height: 20%
+        &[data-cloud="1"]
+          top: 5%
+          left: 10%
+          width: 30%
+          height: 20%
+        &[data-cloud="2"]
+          top: 5%
+          right: 7%
+          width: 14%
+          height: 9%
+      &-bubble
+        top: 7%
+        left: 16%
+        width: 18%
+        height: 15%
+      &-relations
+        top: 14%
+        left: 14%
+        width: 11%
+        height: 11.5%
