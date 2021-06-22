@@ -4,7 +4,7 @@ mixin about
   section.about.container
     .about__wrapper.wrapper
       .about__logo
-        .about__logo-img
+        .about__logo-img(data-logo="ppr")
         p.about__logo-text ППР Командировки
       .about__info
         +heading('О компании')
@@ -22,3 +22,20 @@ mixin about
           .about__advantage
             p.about__advantage-title > 4 000 000
             p.about__advantage-desc транзакций ежемесячно
+
+mixin about-coop
+  section.about.about--coop.container
+    .about__wrapper.wrapper
+      .about__logo
+        .about__logo-img(data-logo="smartway")
+      .about__info
+        p.about__desc ППР в сотрудничестве со Smartway оптимизирует ваши бизнес поездки, сохранив ваш бюджет и сэкономив время.<br><br>Smartway — онлайн-сервис для бронирования деловых поездок. Он объединяет корпоративные инструменты, необходимые для планирования и организации командировок.<br><br>Smartway входит в группу компаний 1С.<br><br>Благодаря инновациям, Smartway стал резидентом технопарка «Сколково».
+        .about__advantage
+          p.about__advantage-title 1500 компаний
+          p.about__advantage-desc пользуются сервисом на постоянной основе
+        .about__advantage
+          p.about__advantage-title 2500 операций в день
+          p.about__advantage-desc бронирование перелетов. Ж/Д билетов и гостиниц
+        .about__advantage
+          p.about__advantage-title 98% броней онлайн
+          p.about__advantage-desc электронные билеты и ваучеры выписываются без оператора
